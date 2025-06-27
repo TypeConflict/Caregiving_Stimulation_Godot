@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjgovlm1jya5j"]
+
+[ext_resource type="PackedScene" uid="uid://dv34tang8u0ov" path="res://scenes/冰箱.tscn" id="1_buhsi"]
+[ext_resource type="PackedScene" uid="uid://gxgt3btiimta" path="res://scenes/檯面.tscn" id="3_5l8lw"]
+[ext_resource type="PackedScene" uid="uid://dt5qndv4kfrml" path="res://scenes/水槽.tscn" id="4_4k37s"]
+[ext_resource type="PackedScene" uid="uid://p421pcuslyiw" path="res://scenes/烤吐司機.tscn" id="5_ak4ul"]
+[ext_resource type="PackedScene" uid="uid://c71tsm06gmlq0" path="res://scenes/爐具.tscn" id="5_oh6it"]
+
+[node name="Area2D" type="Area2D"]
+
+[node name="冰箱" parent="." instance=ExtResource("1_buhsi")]
+
+[node name="長檯面" parent="." instance=ExtResource("3_5l8lw")]
+position = Vector2(38, 7)
+
+[node name="洗手槽" parent="." instance=ExtResource("4_4k37s")]
+position = Vector2(16, 4)
+
+[node name="烤吐司機" parent="." instance=ExtResource("5_ak4ul")]
+position = Vector2(42, 1)
+scale = Vector2(0.4, 0.4)
+
+[node name="Stove" parent="." instance=ExtResource("5_oh6it")]
+position = Vector2(59, 7)

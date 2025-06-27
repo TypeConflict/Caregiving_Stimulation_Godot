@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dv1n04g4feg4b"]
+
+[ext_resource type="Texture2D" uid="uid://c4jr5eanlmmhe" path="res://assets/interior full/furniture/couchtables.png" id="1_871lm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1lfb8"]
+radius = 5.09902
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1lfb8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_871lm")
+region_enabled = true
+region_rect = Rect2(3, 34, 25, 14)

@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://hijluj1ar734"]
+
+[ext_resource type="Texture2D" uid="uid://bgmdunxqo1dcg" path="res://assets/interior full/furniture/couches.png" id="1_q8oaq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l67h3"]
+size = Vector2(31.8749, 34)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.100006, 7)
+scale = Vector2(0.320001, 1)
+shape = SubResource("RectangleShape2D_l67h3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_q8oaq")
+region_enabled = true
+region_rect = Rect2(33, 403, 13, 29)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, 17)
+texture = ExtResource("1_q8oaq")
+region_enabled = true
+region_rect = Rect2(114, 413, 13, 19)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(9, 19)
+rotation = -1.5708
+scale = Vector2(1.04, 1)
+texture = ExtResource("1_q8oaq")
+region_enabled = true
+region_rect = Rect2(738, 321, 11, 8)

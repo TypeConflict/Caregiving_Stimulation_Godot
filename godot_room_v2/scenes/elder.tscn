@@ -1,0 +1,71 @@
+[gd_scene load_steps=11 format=3 uid="uid://idurwsjwd4dv"]
+
+[ext_resource type="Texture2D" uid="uid://bcjoe7b04h2w" path="res://assets/interior full/pets/pets.png" id="1_6p2eb"]
+[ext_resource type="Script" uid="uid://dl36xqyjh0c4" path="res://scenes/elder.gd" id="1_jhjp1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhjp1"]
+atlas = ExtResource("1_6p2eb")
+region = Rect2(0, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4qji"]
+atlas = ExtResource("1_6p2eb")
+region = Rect2(16, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onrgn"]
+atlas = ExtResource("1_6p2eb")
+region = Rect2(32, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6h54"]
+atlas = ExtResource("1_6p2eb")
+region = Rect2(48, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lbd36"]
+atlas = ExtResource("1_6p2eb")
+region = Rect2(64, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83nqr"]
+atlas = ExtResource("1_6p2eb")
+region = Rect2(80, 160, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u1dcd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhjp1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4qji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onrgn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6h54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lbd36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83nqr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6p2eb"]
+radius = 3.16228
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_jhjp1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u1dcd")
+frame = 5
+frame_progress = 0.783596
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 3)
+shape = SubResource("CircleShape2D_6p2eb")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]

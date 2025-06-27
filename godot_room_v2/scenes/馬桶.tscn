@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://caxl4km1v7t5x"]
+
+[ext_resource type="Texture2D" uid="uid://dneh0dhlb1ga8" path="res://assets/interior full/furniture/bathroom.png" id="1_ucxry"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_08x80"]
+radius = 6.0
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ucxry")
+region_enabled = true
+region_rect = Rect2(17, 106, 13, 22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 5)
+shape = SubResource("CircleShape2D_08x80")

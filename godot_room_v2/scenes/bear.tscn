@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://dm3y0ddwpn2rn"]
+
+[ext_resource type="Texture2D" uid="uid://e6k7vq1s7sdo" path="res://assets/bear_assets/bear.png" id="1_a3xf0"]
+[ext_resource type="Script" uid="uid://wcfx5lx65pjg" path="res://scenes/bear.gd" id="1_aquv5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aquv5"]
+radius = 5.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aquv5"]
+atlas = ExtResource("1_a3xf0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0uag"]
+atlas = ExtResource("1_a3xf0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5djg"]
+atlas = ExtResource("1_a3xf0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7gg4"]
+atlas = ExtResource("1_a3xf0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r4uyl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aquv5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0uag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a5djg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h7gg4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_aquv5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -7)
+shape = SubResource("CircleShape2D_aquv5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -12)
+sprite_frames = SubResource("SpriteFrames_r4uyl")
+autoplay = "default"
+frame = 3
+frame_progress = 0.724188
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 3.0
+target_desired_distance = 3.0
+path_postprocessing = 1
+debug_enabled = true
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://didnk2ythqoj3"]
+
+[ext_resource type="Script" uid="uid://bb0spgsaja3ja" path="res://scenes/洗衣機.gd" id="1_6mjgf"]
+[ext_resource type="Texture2D" uid="uid://dneh0dhlb1ga8" path="res://assets/interior full/furniture/bathroom.png" id="2_wxyoc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mjgf"]
+size = Vector2(14, 17)
+
+[node name="Washing machine" type="Area2D"]
+script = ExtResource("1_6mjgf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_wxyoc")
+region_enabled = true
+region_rect = Rect2(208, 78, 16, 18)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_6mjgf")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

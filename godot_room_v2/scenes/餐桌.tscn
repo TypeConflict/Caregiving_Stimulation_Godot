@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5pf0ewpbmvk8"]
+
+[ext_resource type="Texture2D" uid="uid://daedlf1300mco" path="res://assets/interior free/interior free.png" id="1_02ppr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eotx8"]
+size = Vector2(29, 18)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_eotx8")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_02ppr")
+region_enabled = true
+region_rect = Rect2(1, 11, 30, 21)
+metadata/_edit_group_ = true

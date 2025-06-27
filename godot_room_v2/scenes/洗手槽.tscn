@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cetufnccnoiyq"]
+
+[ext_resource type="Texture2D" uid="uid://dneh0dhlb1ga8" path="res://assets/interior full/furniture/bathroom.png" id="1_o8g8x"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_waeue"]
+radius = 5.0
+height = 20.0
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_o8g8x")
+region_enabled = true
+region_rect = Rect2(113, 292, 15, 28)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_waeue")

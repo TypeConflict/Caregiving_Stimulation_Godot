@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://brta2wlrj211g"]
+
+[ext_resource type="Texture2D" uid="uid://dbx7rviufffcj" path="res://assets/interior full/furniture/storage.png" id="1_48sg4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7g6sh"]
+size = Vector2(23, 23)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7g6sh")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_48sg4")
+region_enabled = true
+region_rect = Rect2(33, 66, 30, 30)

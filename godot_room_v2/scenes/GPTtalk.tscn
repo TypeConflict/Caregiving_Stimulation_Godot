@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdhpxr5gmtbsx"]
+
+[ext_resource type="Texture2D" uid="uid://cwthd5f2ox3bx" path="res://assets/bear_assets/GPT對話框.png" id="1_yfh02"]
+
+[node name="GPTtalk" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yfh02")

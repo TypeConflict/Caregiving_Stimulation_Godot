@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://5onreq3eisme"]
+
+[ext_resource type="Texture2D" uid="uid://daedlf1300mco" path="res://assets/interior free/interior free.png" id="1_crk7e"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vsxjd"]
+radius = 4.0
+height = 12.0
+
+[node name="Area2D" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_crk7e")
+region_enabled = true
+region_rect = Rect2(49, 13, 13, 19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_vsxjd")

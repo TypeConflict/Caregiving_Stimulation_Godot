@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://45iw58nry4o4"]
+
+[ext_resource type="Texture2D" uid="uid://clg0busm05246" path="res://assets/interior full/furniture/kitchen_tiles.png" id="1_r77eq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gs1kp"]
+size = Vector2(14, 12)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_gs1kp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_r77eq")
+region_enabled = true
+region_rect = Rect2(0, 176, 16, 16)

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjyohq5bi8qpd"]
+
+[ext_resource type="Texture2D" uid="uid://xbd027w0p0cg" path="res://assets/interior full/furniture/tables.png" id="1_yjad0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1b7d3"]
+size = Vector2(13, 20)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_1b7d3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yjad0")
+region_enabled = true
+region_rect = Rect2(38, 84, 20, 28)

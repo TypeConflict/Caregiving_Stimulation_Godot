@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://c71tsm06gmlq0"]
+
+[ext_resource type="Script" uid="uid://c5barhmmhry0j" path="res://scenes/爐具.gd" id="1_t1i68"]
+[ext_resource type="Texture2D" uid="uid://b41cbkpqdf348" path="res://assets/interior full/furniture/kitchens_assembled.png" id="2_54o2j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t1i68"]
+size = Vector2(14, 13.5)
+
+[node name="Dove" type="Area2D"]
+script = ExtResource("1_t1i68")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_54o2j")
+region_enabled = true
+region_rect = Rect2(16, 128, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.25)
+shape = SubResource("RectangleShape2D_t1i68")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

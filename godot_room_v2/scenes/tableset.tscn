@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlfcg3e7i2gb7"]
+
+[ext_resource type="PackedScene" uid="uid://5onreq3eisme" path="res://scenes/chair1.tscn" id="1_fc32d"]
+[ext_resource type="Texture2D" uid="uid://daedlf1300mco" path="res://assets/interior free/interior free.png" id="2_m388c"]
+[ext_resource type="PackedScene" uid="uid://b5pf0ewpbmvk8" path="res://scenes/table.tscn" id="3_tno4k"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3vkje"]
+radius = 5.0
+height = 10.0
+
+[node name="Area2D" type="Area2D"]
+
+[node name="chair1" parent="." instance=ExtResource("1_fc32d")]
+position = Vector2(-9, -14)
+
+[node name="chair2" parent="." instance=ExtResource("1_fc32d")]
+position = Vector2(10, -14)
+
+[node name="chair3" type="Area2D" parent="."]
+position = Vector2(-23, -1)
+
+[node name="chair3" type="Sprite2D" parent="chair3"]
+texture = ExtResource("2_m388c")
+region_enabled = true
+region_rect = Rect2(65, 13, 12, 19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chair3"]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_3vkje")
+
+[node name="chair4" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="chair4"]
+position = Vector2(22, -1)
+texture = ExtResource("2_m388c")
+region_enabled = true
+region_rect = Rect2(83, 13, 12, 19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chair4"]
+position = Vector2(22, 1)
+shape = SubResource("CapsuleShape2D_3vkje")
+
+[node name="Table" parent="." instance=ExtResource("3_tno4k")]
+scale = Vector2(1.56, 1.26849)
+
+[node name="chair5" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chair5"]
+position = Vector2(-8.5, 12)
+shape = SubResource("CapsuleShape2D_3vkje")
+
+[node name="Sprite2D" type="Sprite2D" parent="chair5"]
+position = Vector2(-8.5, 10)
+texture = ExtResource("2_m388c")
+region_enabled = true
+region_rect = Rect2(97, 16, 13, 16)
+
+[node name="chair6" type="Area2D" parent="."]
+position = Vector2(11, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chair6"]
+position = Vector2(-1.5, 12)
+shape = SubResource("CapsuleShape2D_3vkje")
+
+[node name="Sprite2D" type="Sprite2D" parent="chair6"]
+position = Vector2(-1.5, 10)
+texture = ExtResource("2_m388c")
+region_enabled = true
+region_rect = Rect2(97, 16, 13, 16)
